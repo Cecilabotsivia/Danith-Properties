@@ -29,7 +29,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Sale",
         badgeClass: "sale",
         specs: ["4 Beds", "5 Baths", "Swimming Pool","Kitchenette","Living area","Balcony"],
-        images: ["/images/VXY2.jpeg","/images/VXY7.jpeg","/images/VXY10.jpg","/images/VXY3.jpeg","/images/VXY1.jpeg","/images/VXY6.jpeg","/images/VXY4.jpeg"],
+        images: ["/images/VXY2.jpeg","/images/VXY7.jpeg","/images/VXY10.jpg","/images/VXY3.jpeg","/images/VXY1.jpeg","/images/VXY6.jpeg","/images/      VXY4.jpeg"],
         description: "A spacious 4-bedroom Townhouse with en-suite bathrooms throughout, a large compound, and a modern kitchen. Located on a titled plot in a fast-developing residential area of Tse Addo, minutes from the main road."
     },
     {
@@ -199,10 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* SEARCH
-       Works from every page: if we're already on the Listings page,
-       filter the grid in place; otherwise redirect there with the
-       query attached (?search=...), where it's picked up below. */
+    /* SEARCH */
 
     const searchForm = document.getElementById("searchForm");
     const searchInput = document.getElementById("searchInput");
@@ -218,30 +215,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            const onListingsPage = document.querySelectorAll(".listing-card").length > 0;
-
-            if (onListingsPage) {
-                activeSearch = query;
-                applyListingsFilter();
-
-                const listingsSection = document.getElementById("listings");
-                if (listingsSection) {
-                    listingsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-                return;
-            }
-
-            const target = "listings.html?search=" + encodeURIComponent(query);
-            const curtain = document.getElementById("pageTransition");
-
-            if (curtain) {
-                curtain.classList.remove("hide");
-                window.setTimeout(function () {
-                    window.location.href = target;
-                }, 450);
-            } else {
-                window.location.href = target;
-            }
+            alert('Searching properties for: "' + query + '"');
+            console.log("Property search:", query);
+            searchInput.value = "";
         });
     }
 
@@ -362,38 +338,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* FEATURED LISTINGS FILTER + SEARCH
-       Combines the category filter buttons with the search box:
-       a card must match both the active category and the search
-       text (matched against its title and location) to show. */
+    /* FEATURED LISTINGS FILTER */
 
     const filterButtons = document.querySelectorAll(".filter-btn");
     const listingCards = document.querySelectorAll(".listing-card");
     const listingsEmpty = document.getElementById("listingsEmpty");
 
-    let activeFilter = "all";
-    let activeSearch = "";
-
-    function applyListingsFilter() {
+    function applyListingsFilter(filter) {
         let visibleCount = 0;
-        const query = activeSearch.trim().toLowerCase();
 
         listingCards.forEach(function (card) {
             const category = card.getAttribute("data-category");
-            const matchesFilter = activeFilter === "all" || category === activeFilter;
 
-            let matchesSearch = true;
-            if (query !== "") {
-                const titleEl = card.querySelector("h3");
-                const locationEl = card.querySelector(".listing-location");
-                const haystack = (
-                    (titleEl ? titleEl.textContent : "") + " " +
-                    (locationEl ? locationEl.textContent : "")
-                ).toLowerCase();
-                matchesSearch = haystack.indexOf(query) !== -1;
-            }
-
-            if (matchesFilter && matchesSearch) {
+            if (filter === "all" || category === filter) {
                 card.classList.remove("hide");
                 visibleCount++;
             } else {
@@ -402,9 +359,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (listingsEmpty) {
-            listingsEmpty.textContent = query !== ""
-                ? 'No properties match "' + activeSearch.trim() + '".'
-                : "No properties match this filter right now.";
             listingsEmpty.style.display = visibleCount === 0 ? "block" : "none";
         }
     }
@@ -420,16 +374,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 button.classList.add("active");
 
-                activeFilter = button.getAttribute("data-filter");
-                applyListingsFilter();
+                applyListingsFilter(button.getAttribute("data-filter"));
             });
         });
 
         // Support arriving from a link like listings.html?filter=commercial
-        // and/or from the header search box, e.g. ?search=apartment
-        const params = new URLSearchParams(window.location.search);
-        const urlFilter = params.get("filter");
-        const urlSearch = params.get("search");
+        const urlFilter = new URLSearchParams(window.location.search).get("filter");
 
         if (urlFilter) {
             const matchingBtn = document.querySelector('.filter-btn[data-filter="' + urlFilter + '"]');
@@ -439,19 +389,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     btn.classList.remove("active");
                 });
                 matchingBtn.classList.add("active");
-                activeFilter = urlFilter;
+                applyListingsFilter(urlFilter);
             }
-        }
-
-        if (urlSearch) {
-            activeSearch = urlSearch;
-            if (searchInput) {
-                searchInput.value = urlSearch;
-            }
-        }
-
-        if (urlFilter || urlSearch) {
-            applyListingsFilter();
         }
     }
 
