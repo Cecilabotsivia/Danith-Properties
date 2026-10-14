@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Listings | Danith Properties & Management Services Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-transition" id="pageTransition"></div>
+
+<header class="header">
+    <div class="header-top">
+        <div class="logo">
+            <a href="index.html">
+                <img src="/images/Danith logo1.png" alt="Danith Properties & Management Services Ltd. Logo">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="listings.html" class="current">LISTINGS</a></li>
+            <li><a href="properties.html">PORTFOLIOS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <form class="search-box" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search properties..." aria-label="Search properties" required>
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<section class="page-banner">
+    <div class="page-banner-overlay"></div>
+    <div class="page-banner-content">
+    </div>
+</section>
+
+<main>
+    <section class="listings-section" id="listings">
+        <div class="section-container">
+            <div class="section-heading">
+                <span>FEATURED LISTINGS</span>
+                <h2>Available Properties</h2>
+                <p>Browse a selection of properties currently available for sale or rent in Tse Addo and East Airport.</p>
+            </div>
+
+            <div class="listings-filter">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="rent">For Rent</button>
+                <button type="button" class="filter-btn" data-filter="sale">For Sale</button>
+                <button type="button" class="filter-btn" data-filter="commercial">Commercial</button>
+            </div>
+
+            <div class="listings-grid">
+                <div class="listing-card" data-category="sale">
+                    <a href="property.html?id=1" class="listing-image-link">
+                        <div class="listing-image">
+                        <img src="/images/EAS7.jpg" alt="5-Bedroom Townhouse for sale in East Airport">
+                        <span class="listing-badge sale">For Sale</span>
+                    </div>
+                    </a>
+                    <div class="listing-content">
+                        <div class="listing-price">$900,000</div>
+                        <h3><a href="property.html?id=1">5-Bedroom Townhouse</a></h3>
+                        <p class="listing-location">East Airport</p>
+                        <div class="listing-specs">
+                            <span>5 Beds</span><span>9 Baths</span><span>2 Living Areas</span>
+                            <span>2 maidroom</span><span>Swimming pool</span><span>1 Boys' Qrt</span>
+                        </div>
+                        <a href="contact.html?property=5-Bedroom%20Townhouse#viewing-form" class="listing-btn">Book a Viewing</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-category="sale">
+                    <a href="property.html?id=2" class="listing-image-link">
+                        <div class="listing-image">
+                        <img src="/images/VXY11.jpg" alt="4-Bedroom Townhouse for sale in Tse Addo">
+                        <span class="listing-badge sale">For Sale</span>
+                    </div>
+                    </a>
+                    <div class="listing-content">
+                        <div class="listing-price">$450,000</div>
+                        <h3><a href="property.html?id=2">4-Bedroom Townhouse</a></h3>
+                        <p class="listing-location">Tse Addo, Accra</p>
+                        <div class="listing-specs">
+                            <span>4 Beds</span><span>5 Baths</span><span>Swimming Pool</span>
+                            <span>Kitchenette</span><span>Living area</span><span>Balcony</span>
+                        </div>
+                        <a href="contact.html?property=4-Bedroom%20Townhouse#viewing-form" class="listing-btn">Book a Viewing</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-category="commercial">
+                    <a href="property.html?id=3" class="listing-image-link">
+                        <div class="listing-image">
+                        <img src="/images/Office.jpg" alt="Office space for rent">
+                        <span class="listing-badge rent">For Rent</span>
+                    </div>
+                    </a>
+                    <div class="listing-content">
+                        <div class="listing-price">GH&#8373; 17,000 / month</div>
+                        <h3><a href="property.html?id=3">Open-Plan Office Space</a></h3>
+                        <p class="listing-location">Tse Addo, Accra</p>
+                        <div class="listing-specs">
+                            <span>160 sqm</span><span>2 Baths</span><span>Kitchenette</span>
+                        </div>
+                        <a href="contact.html?property=Open-Plan%20Office%20Space#viewing-form" class="listing-btn">Book a Viewing</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-category="rent">
+                    <a href="property.html?id=4" class="listing-image-link">
+                        <div class="listing-image">
+                        <img src="/images/3bd.jpg" alt="3 bedroom Apartment For rent">
+                        <span class="listing-badge rent">For Rent</span>
+                    </div>
+                    </a>
+                    <div class="listing-content">
+                        <div class="listing-price">GH&#8373; 9,000 / month</div>
+                        <h3><a href="property.html?id=4">3 bedroom Apartment</a></h3>
+                        <p class="listing-location">Tse Addo, Accra</p>
+                        <div class="listing-specs">
+                            <span>3 bedrooms</span><span>fitted kitchen</span><span>Living area</span>
+                            <span>Balcony</span><span>1 visitor's washroom</span><span>Service charge inclusive</span>
+                        </div>
+                        <a href="contact.html?property=3%20bedroom%20Apartment#viewing-form" class="listing-btn">Book a Viewing</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-category="rent">
+                    <a href="property.html?id=5" class="listing-image-link">
+                        <div class="listing-image">
+                        <img src="/images/4bd.jpg" alt="4-Bedroom Apartment for rent">
+                        <span class="listing-badge rent">For Rent</span>
+                    </div>
+                    </a>
+                    <div class="listing-content">
+                        <div class="listing-price">$1,500 / month</div>
+                        <h3><a href="property.html?id=5">4-Bedroom Apartment</a></h3>
+                        <p class="listing-location">Tse Addo, Accra</p>
+                        <div class="listing-specs">
+                            <span>4 Bedrooms</span><span>5 washrooms</span><span>Fitted Kitchen</span>
+                            <span>Spacious Living area</span><span>Self-compound</span>
+                        </div>
+                        <a href="contact.html?property=4-Bedroom%20Apartment#viewing-form" class="listing-btn">Book a Viewing</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-category="commercial">
+                    <a href="property.html?id=6" class="listing-image-link">
+                        <div class="listing-image">
+                        <img src="/images/Office.jpg" alt="Office Space For Rent">
+                        <span class="listing-badge rent">For Rent</span>
+                    </div>
+                    </a>
+                    <div class="listing-content">
+                        <div class="listing-price">GH&#8373; 13,000</div>
+                        <h3><a href="property.html?id=6">Office Space</a></h3>
+                        <p class="listing-location">Tse Addo, Accra</p>
+                        <div class="listing-specs">
+                            <span>74sqm</span><span>2 Bath</span><span>Corporate Space</span>
+                        </div>
+                        <a href="contact.html?property=Office%20Space#viewing-form" class="listing-btn">Book a Viewing</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="listings-empty" id="listingsEmpty">No properties match this filter right now.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="/images/Danith logo1.png" alt="Danith Properties Logo">
+            <p>Professional real estate and property management solutions in Tse Addo and East Airport.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="listings.html">Listings</a>
+            <a href="properties.html">Property Portfolios</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <h4>LOCATION ADDRESS</h4>
+            <p>2nd Floor,Royal Mart Building<br>Tse Addo</p>
+            <p><a href="tel:+233545501104">+233 54 550 1104</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Danith Properties & Management Services Ltd. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<div class="floating-contact">
+    <a href="https://wa.me/233545501104" target="_blank" rel="noopener noreferrer" class="float-btn whatsapp-btn" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor" aria-hidden="true">
+            <path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.61.73 5.05 1.996 7.13L2.667 29.333l6.37-1.97A13.28 13.28 0 0 0 16.004 29.333c7.363 0 13.333-5.97 13.333-13.333S23.367 2.667 16.004 2.667Zm0 24.267a10.84 10.84 0 0 1-5.83-1.69l-.418-.26-3.78 1.17 1.19-3.68-.27-.42a10.86 10.86 0 0 1-1.71-5.85c0-6.02 4.9-10.93 10.92-10.93 6.02 0 10.93 4.9 10.93 10.93 0 6.02-4.91 10.93-10.93 10.93Zm5.98-8.19c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.33-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.37-.5-2.6-1.6-.96-.86-1.61-1.92-1.8-2.24-.19-.33-.02-.5.14-.66.14-.14.33-.38.5-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.05-.57-.11-.16-.99-2.4-1.36-3.28-.36-.86-.73-.74-1-.75-.25-.01-.55-.01-.85-.01-.3 0-.77.11-1.05.55-.28.44-1.08 1.06-1.08 2.58 0 1.52 1.11 2.99 1.27 3.2.16.22 2.16 3.3 5.24 4.5 3.08 1.2 3.08.8 3.63.75.55-.06 1.79-.73 2.05-1.44.25-.71.25-1.32.17-1.44-.08-.11-.3-.18-.63-.34Z"/>
+        </svg>
+    </a>
+    <a href="tel:+233545501104" class="float-btn call-btn" aria-label="Call Danith Properties">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+        </svg>
+    </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
