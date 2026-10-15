@@ -17,7 +17,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Sale",
         badgeClass: "Sale",
         specs: ["5 Beds", "6 Baths", "1 Boy's Qrt"],
-        images: ["/images/EAS7.jpg", "/images/EAS1.jpg", "/images/EAS2.jpg","/images/EAS3.jpg","/images/EAS4.jpg","/images/EAS5.jpg","/images/EAS6.jpg"],
+        images: ["images/EAS7.jpg", "images/EAS1.jpg", "images/EAS2.jpg","images/EAS3.jpg","images/EAS4.jpg","images/EAS5.jpg","images/EAS6.jpg"],
         description: "A newly built 5-bedroom townhouse in a quiet, gated section of East Airport. Featuring an open-plan living and dining area, a fitted kitchen, and private parking. Ideal for a family looking for a secure, well-located."
     },
     {
@@ -29,7 +29,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Sale",
         badgeClass: "sale",
         specs: ["4 Beds", "5 Baths", "Swimming Pool","Kitchenette","Living area","Balcony"],
-        images: ["/images/VXY2.jpeg","/images/VXY7.jpeg","/images/VXY10.jpg","/images/VXY3.jpeg","/images/VXY1.jpeg","/images/VXY6.jpeg","/images/      VXY4.jpeg"],
+        images: ["images/VXY2.jpeg","images/VXY7.jpeg","images/VXY10.jpg","images/VXY3.jpeg","images/VXY1.jpeg","images/VXY6.jpeg","images/      VXY4.jpeg"],
         description: "A spacious 4-bedroom Townhouse with en-suite bathrooms throughout, a large compound, and a modern kitchen. Located on a titled plot in a fast-developing residential area of Tse Addo, minutes from the main road."
     },
     {
@@ -41,7 +41,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Rent",
         badgeClass: "rent",
         specs: ["160 sqm", "2 Baths", "Kitchenette"],
-        images: ["/images/Shop.jpg", "/images/Office.jpg"],
+        images: ["images/Shop.jpg", "images/Office.jpg"],
         description: "A bright, open-plan office suite suitable for a growing team, with dedicated parking for up to 10 vehicles, backup power provision, and flexible partitioning options available on request."
     },
     {
@@ -53,7 +53,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Rent",
         badgeClass: "rent",
         specs: ["3 bedrooms", "fitted kitchen", "Living area","Balcony","1 visitor's washroom","Service charge inclusive"],
-        images: ["/images/3bd1.jpg", "/images/3bd2.jpg", "/images/3bd3.jpg","/images/3bd4.jpg","/images/3bd5.jpg","/images/3bd6.jpg"],
+        images: ["images/3bd1.jpg", "images/3bd2.jpg", "images/3bd3.jpg","images/3bd4.jpg","images/3bd5.jpg","images/3bd6.jpg"],
         description:"A spacious 3-bedroom Apartment For Rent with en-suite bathrooms throughout, a large compound, and a modern kitchen. Located in Tse Addo, minutes from the main road."
     },
     {
@@ -65,7 +65,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Rent",
         badgeClass: "rent",
         specs: ["4 Bedrooms", "5 washrooms", "Fitted Kitchen","Spacious Living area","Self-compound"],
-        images: ["/images/4bd1.jpg", "/images/4bd2.jpg", "/images/4bd3.jpg","/images/4bd4.jpg","/images/4bd5.jpg"],
+        images: ["images/4bd1.jpg", "images/4bd2.jpg", "images/4bd3.jpg","images/4bd4.jpg","images/4bd5.jpg"],
         description: "A comfortable 4-bedroom apartment with a fitted kitchen, and compound parking."
     },
     {
@@ -77,7 +77,7 @@ const PROPERTIES_DATA = [
         badgeText: "For Rent",
         badgeClass: "rent",
         specs: ["74 sqm", "2 Bath", "Corporate Space"],
-        images: ["/images/Office.jpg", "/images/Shop.jpg"],
+        images: ["images/Office.jpg", "images/Shop.jpg"],
         description: "A first-floor unit on a busy road, suitable for an Office and showroom in Tse Addo."
     }
 ];

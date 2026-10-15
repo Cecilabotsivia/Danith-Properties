@@ -14,7 +14,7 @@
     <div class="header-top">
         <div class="logo">
             <a href="index.html">
-                <img src="/images/Danith logo1.png" alt="Danith Properties & Management Services Ltd. Logo">
+                <img src="images/Danith logo1.png" alt="Danith Properties & Management Services Ltd. Logo">
             </a>
         </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
@@ -56,51 +56,94 @@
                 <button type="button" class="tab-btn" data-tab="enquiry">Make an Enquiry</button>
             </div>
 
-            <form id="clientForm" novalidate action="https://formspree.io/f/xvkzwynn" method="POST">
-                <input type="hidden" name="request_type" id="requestType" value="viewing">
-                <input type="hidden" name="_subject" value="New Property Enquiry - Danith Properties Website">
+    <form id="clientForm" action="https://formspree.io/f/xvkzwynn" method="POST">
+             <input type="hidden" name="request_type" id="requestType" value="viewing">
+             <input type="hidden" name="_subject" value="New Property Request - Danith Properties Website">
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="e.g. 024 000 0000" required>
-                    </div>
-                </div>
+             <div class="form-row">
+             <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Your full name"
+                minlength="2"
+                autocomplete="name"
+                required>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="property">Property of Interest</label>
-                        <input type="text" id="property" name="property" placeholder="e.g. 3-Bedroom Townhouse, Tse Addo">
-                    </div>
-                </div>
+            <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 024 000 0000"
+                autocomplete="tel"
+                required>
+            </div>
+            </div>
 
-                <div class="form-row viewing-fields">
-                    <div class="form-group">
-                        <label for="viewDate">Preferred Date</label>
-                        <input type="date" id="viewDate" name="viewDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="viewTime">Preferred Time</label>
-                        <input type="time" id="viewTime" name="viewTime">
-                    </div>
-                </div>
+            <div class="form-row">
+            <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required>
+            </div>
 
-                <div class="form-group full-width">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Tell us a bit more about what you're looking for..."></textarea>
-                </div>
+            <div class="form-group">
+            <label for="property">Property of Interest *</label>
+            <input
+                type="text"
+                id="property"
+                name="property"
+                placeholder="e.g. 3-Bedroom Townhouse, Tse Addo"
+                required>
+            </div>
+            </div>
 
-                <button type="submit" class="submit-btn">Submit Request</button>
-                <p class="form-status" id="formStatus"></p>
-            </form>
+           <div class="form-row viewing-fields">
+           <div class="form-group">
+            <label for="viewDate">Preferred Date *</label>
+            <input
+                type="date"
+                id="viewDate"
+                name="viewDate"
+                required>
+          </div>
+
+          <div class="form-group">
+            <label for="viewTime">Preferred Time *</label>
+            <input
+                type="time"
+                id="viewTime"
+                name="viewTime"
+                required>
+          </div>
+          </div>
+
+          <div class="form-group full-width">
+        <label for="message">Message *</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="4"
+            minlength="5"
+            maxlength="2000"
+            placeholder="Tell us what you are looking for..."
+            required></textarea>
+         </div>
+
+         <button type="submit" class="submit-btn">Submit Request</button>
+
+         <p class="form-status" id="formStatus" role="status"aria-live="polite"></p>
+    </form>
         </div>
     </section>
 
@@ -203,7 +246,7 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-logo">
-            <img src="/images/Danith logo1.png" alt="Danith Properties Logo">
+            <img src="images/Danith logo1.png" alt="Danith Properties Logo">
             <p>Professional real estate and property management solutions in Tse Addo and East Airport.</p>
         </div>
         <div class="footer-links">

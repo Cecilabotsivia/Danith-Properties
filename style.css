@@ -269,7 +269,7 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("/images/Danith.1.jpg");
+  background-image: url("images/Danith.1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -943,7 +943,7 @@ textarea:focus-visible {
 .forms {
   position: relative;
   padding: 100px 20px;
-  background-image: url("/images/Danith.1.jpg");
+  background-image: url("images/Danith.1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1375,7 +1375,7 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("/images/Danith.1.jpg");
+  background-image: url("images/Danith.1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
